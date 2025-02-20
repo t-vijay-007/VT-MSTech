@@ -1,0 +1,44 @@
+LTS nodejs
+Visual Studio Code
+Power Platform Tools in VS code
+Power Apps CLI for windows
+Visual studio 2022 
+
+Create folder for Project 
+C:\SampleControl
+
+Command Prompt
+C:\SampleControl>pac pcf init -n SamplePCFControl -ns JenkinsControl -t field
+C:\SampleControl>npm install
+
+goto index.tc file add code in infit method 
+container.appendChild(document.createTextNode("Welcome to PCF Training"));
+save it
+
+npm start //to local run
+
+
+Create a new subfolder Solution
+C:\SampleControl\Solution> pac solution init --publisher-name Jenkins --publisher-prefix JK
+
+cd Soltion
+Open Developer Command Prompt for VS 2022 
+C:\SampleControl\Solution> msbuild /t:build /restore
+
+get the environment url
+goto Admin center--> environment -> open it and copy the environment url
+pac auth create --url https://org66a18548.crm.dynamics.com/ in VS code Terminal
+
+C:\SampleControl> 
+pac pcf push --publisher-prefix JK
+
+Publishing All Customizations...
+
+Go to Admin Center
+Environment --> settings --> product --> features
+enable --> Power Apps component framework for canvas apps
+Save it
+
+Go to power apps
+Create a new app
+go to Get more components--> Code --> Select control --> import
